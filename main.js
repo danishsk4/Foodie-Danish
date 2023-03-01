@@ -21,8 +21,22 @@ let mobileMenu = document.getElementById("mobileMenu");
 let closebtn = document.getElementById("close");
 
 hamburger.addEventListener("click", () => {
-  mobileMenu.style.display = "block";
+  if (mobileMenu.style.display == "block") {
+    mobileMenu.style.display = "none";
+  } else {
+    mobileMenu.style.display = "block";
+  }
 });
 closebtn.addEventListener("click", () => {
   mobileMenu.style.display = "none";
+});
+
+// off mobile menu after going to bookmarks
+let manuEl = document.querySelectorAll(".menu-off");
+// let mobileMenu = document.getElementById("mobileMenu");
+
+manuEl.forEach((element) => {
+  element.addEventListener("click", () => {
+    mobileMenu.style.display = "none";
+  });
 });

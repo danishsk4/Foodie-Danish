@@ -417,7 +417,7 @@ nav .hamburger {
 }
 @media (max-width: 800px) {
   header {
-    height: 7rem;
+/*     height: 6rem; height will be same as desktop*/
     display: grid;
   }
   header nav {
